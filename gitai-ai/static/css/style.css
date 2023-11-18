@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #216090;
+    color: #ffffff;
+  }
+
+.hidden-box {
+    display: none;
+}
+
+.p5Canvas {
+    text-align: center;
+}
+
+.voice_box {
+    text-align: center;
+    font-size: 64px;
+    position:fixed; /* 用途に併せて、absoluteでもOK */
+	width:100%;
+	height:100vh;
+	text-align:center;
+	top:45%; /* 上から半分の位置 */
+}
+
+#item {
+    text-align: center;
+    font-size: 64px;
+    position:fixed; /* 用途に併せて、absoluteでもOK */
+	width:100%;
+	height:100vh;
+	text-align:center;
+    top:25%; /* 上から半分の位置 */
+    opacity: 0;
+}
+
+#item2 {
+    text-align: center;
+    font-size: 48px;
+    position:fixed; /* 用途に併せて、absoluteでもOK */
+	width:100%;
+	height:100vh;
+	text-align:center;
+    top:50%; /* 上から半分の位置 */
+    opacity: 0;
+}
+
+#item3 {
+    text-align: center;
+    font-size: 64px;
+    position:fixed; /* 用途に併せて、absoluteでもOK */
+	width:100%;
+	height:100vh;
+	text-align:center;
+    top:25%; /* 上から半分の位置 */
+    opacity: 0;
+}
+
+#typewriter {
+    text-align: center;
+    font-size: 48px;
+    position:fixed; /* 用途に併せて、absoluteでもOK */
+	width:100%;
+	height:100vh;
+	text-align:center;
+    top:50%; /* 上から半分の位置 */
+}
+
+#typewriter::after {
+    content: "|";
+    animation-name: blink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#typewriter2 {
+    text-align: center;
+    font-size: 42px;
+    position:fixed; /* 用途に併せて、absoluteでもOK */
+	width:100%;
+	height:100vh;
+	text-align:center;
+    top:50%; /* 上から半分の位置 */
+}
+
+#typewriter2::after {
+    content: "|";
+    animation-name: blink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.graph_box {
+    display: none;
+}
+
+svg{
+    background-color: #000000;
+    border:solid 1px #404040;
+  }

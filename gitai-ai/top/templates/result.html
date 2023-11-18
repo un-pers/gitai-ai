@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<script type="text/javascript" src="{% static 'js/result.js' %} "></script>
+
+<div style="text-align:center;">
+    <img src={{img_url}} height=700px>
+</div>
+
+<div>
+    <audio autoplay>
+        <source src="{{sound_url}}">
+    </audio>
+    <audio id="ai_sound">
+        <source src="{{sound_url2}}">
+    </audio>
+</div>
+
+<script>
+    setTimeout(function () { window.location.href = 'http://127.0.0.1:8080/result2?input_word=' + "{{input_word}}"; }, 22000);
+
+    setTimeout(function () { document.getElementById('ai_sound').play(); }, 20000);
+</script>
+
+{% endblock %}

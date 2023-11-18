@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<script type="text/javascript" src="{% static 'js/voice.js' %} "></script>
+
+<div id="item">
+	すみだのまちに住んでいるの？
+</div>
+
+<div id="item2">
+	はい&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;いいえ
+</div>
+
+<script>
+	setTimeout(() => {
+		document.querySelector(`#item`).animate(
+			[
+				{ opacity: 0 },
+				{ opacity: 1 }
+			],
+			{
+				duration: 9000,
+				fill: 'forwards'
+			}
+		);
+	}, 12000)
+
+	setTimeout(() => {
+		document.querySelector(`#item2`).animate(
+			[
+				{ opacity: 0 },
+				{ opacity: 1 }
+			],
+			{
+				duration: 9000,
+				fill: 'forwards'
+			}
+		);
+	}, 12000)
+
+</script>
+{% endblock %}

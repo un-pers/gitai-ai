@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<script type="text/javascript" src="{% static 'js/result2.js' %} "></script>
+
+<div id="item">
+    イメージはあってた？
+</div>
+
+<div id="item2">
+    はい&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;いいえ
+</div>
+
+<script>
+    setTimeout(() => {
+        document.querySelector(`#item`).animate(
+            [
+                { opacity: 0 },
+                { opacity: 1 }
+            ],
+            {
+                duration: 9000,
+                fill: 'forwards'
+            }
+        );
+    }, 1000)
+
+    setTimeout(() => {
+        document.querySelector(`#item2`).animate(
+            [
+                { opacity: 0 },
+                { opacity: 1 }
+            ],
+            {
+                duration: 9000,
+                fill: 'forwards'
+            }
+        );
+    }, 1000)
+</script>
+
+{% endblock %}

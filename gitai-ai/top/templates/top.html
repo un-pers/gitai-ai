@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<script type="text/javascript" src="{% static 'js/index.js' %} "></script>
+<script type="text/javascript" src="{% static 'js/websocket.js' %} "></script>
+
+<div>
+    <audio autoplay loop>
+        <source src="/static/sound/neutral/踏切 2.m4a">
+    </audio>
+</div>
+{% endblock %}

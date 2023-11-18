@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<script type="text/javascript" src="{% static 'js/voice2.js' %} "></script>
+
+<div id="item">
+    まちらしさってなに？
+</div>
+
+<div id="typewriter">
+</div>
+
+<div id="typewriter2">
+</div>
+
+<script>
+    setTimeout(() => {
+        document.querySelector(`#item`).animate(
+            [
+                { opacity: 0 },
+                { opacity: 1 }
+            ],
+            {
+                duration: 9000,
+                fill: 'forwards'
+            }
+        );
+    }, 6000)
+
+    setTimeout(() => {
+        document.querySelector(`#item`).animate(
+            [
+                { opacity: 1 },
+                { opacity: 0 }
+            ],
+            {
+                duration: 9000,
+                fill: 'forwards'
+            }
+        );
+    }, 10000)
+
+</script>
+{% endblock %}
